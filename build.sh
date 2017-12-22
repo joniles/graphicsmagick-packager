@@ -19,7 +19,7 @@ cd ..
 
 echo "Packaging $GM_SOURCE"
 rm -f *.deb
-fpm -s dir -t deb -C $TARGET_DIR --prefix /usr -n graphicsmagick -v $GM_VERSION
+fpm -s dir -t deb -C $TARGET_DIR --prefix /usr -n graphicsmagick -v $GM_VERSION -d libbz2-1.0 -d libc6 -d libfreetype6 -d libgomp1 -d libjasper1 -d libjbig0 -d libjpeg8 -d liblcms2-2 -d libpng12-0 -d libtiff5 -d libwmf0.2-7 -d libx11-6 -d libxext6 -d libxml2 -d zlib1g
 
 echo "Cleaning up"
 rm -rf $TARGET_DIR

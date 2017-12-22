@@ -13,8 +13,12 @@ To install the packaged version that this script creates, use:
 
 ```
 sudo dpkg -i ./graphicsmagick_1.3.27_amd64.deb
+sudo apt-get -f install
 ```
+
+The initial `dpkg` command may report missing dependencies, the `apt-get` command will ensure those dependencies are satisfied.
 
 NOTE:
 1. The build script assumes that [fpm](https://rubygems.org/gems/fpm) is installed.
 2. The build configuration was taken from the 1.3.18 package (the `gm version` command line shows build configuration used).
+3. The dependency list was taken from the 1.3.18 package
